@@ -20,11 +20,13 @@ class LoginRequest(BaseModel):
 
 @router.post("/register")
 async def register(data: RegisterRequest, db: AsyncSession = Depends(get_db)):
-    result = await db.execute(select(User).where(
-        (User.email == data.email) | (User.username == data.username)
-    ))
-    if result.scalar_one_or_none():
-        raise HTTPException(status_code=400, detail="User already exists")
+    username_check = await db.execute(select(User).where(User.username == data.username))
+    if username_check.scalar_one_or_none():
+        raise HTTPException(status_code=400, detail="Username already taken")
+
+    email_check = await db.execute(select(User).where(User.email == data.email))
+    if email_check.scalar_one_or_none():
+        raise HTTPException(status_code=400, detail="Email already registered")
 
     user = User(
         username=data.username,
