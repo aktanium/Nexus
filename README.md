@@ -104,7 +104,7 @@ Open http://localhost:5173
 
 ## 📸 Screenshots
 
-> Add screenshots after deployment is verified
+![Nexus Login](screenshot.png)
 
 ---
 
