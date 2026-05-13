@@ -98,7 +98,7 @@ Open http://localhost:5173
 - 🌐 Live Website: https://nexus-seven-peach-22.vercel.app
 - 🔧 API Docs: https://nexus-chat-api-2n8m.onrender.com/docs
 - 📦 GitHub: https://github.com/aktanium/Nexus
-- 🎥 Demo Video: [YouTube Link — add after recording]
+- 🎥 Demo Video: https://youtu.be/AuuiT83EyRQ
 
 ---
 
